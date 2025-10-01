@@ -10,10 +10,10 @@ function App() {
     <>
       <div>
         <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
+          <img src={viteLogo} className="logo" alt="Vite logo"/>
         </a>
         <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
+          <img src={reactLogo} className="logo react" alt="React logo"/>
         </a>
       </div>
       <h1>Vite + React</h1>
@@ -28,6 +28,26 @@ function App() {
       <p className="read-the-docs">
         Click on the Vite and React logos to learn more
       </p>
+      <HelloWorld/>
+    </>
+  )
+}
+
+function HelloWorld() {
+  const user = {
+    name: 'Hedy Lamarr',
+    imageUrl: 'https://i.imgur.com/yXOvdOSs.jpg',
+    imageSize: 90,
+  }
+  return (
+    <>
+      <h1 className="hello">Hello, world!</h1>
+      <p>
+        This is a simple React component.
+      </p>
+      <img src={user.imageUrl}
+           alt={user.name}
+           style={{ width: user.imageSize }}/>
     </>
   )
 }
